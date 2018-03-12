@@ -1,0 +1,114 @@
+#browser:not(.address-off) #main>.toolbar {
+    position: absolute;
+    width: 500px;
+    left: calc(50% - 250px);
+    box-shadow: rgba(0,0,0,0.4) 0 6px 24px;
+    background: white;
+    top: 8px;
+    z-index: 2;
+    transition: all 0.2s;
+    opacity: 0;
+    transform: translateY(-50px);
+}
+#browser:not(.address-off) #main>.toolbar>.toolbar,
+#browser:not(.address-off) #main>.toolbar>.searchfield {
+    display: none;
+}
+#browser:not(.address-off) #main>.toolbar::after {
+    height: 0px;
+}
+#browser:not(.address-off) #main>.toolbar.vt-shown,
+#browser:not(.address-off) #main>.toolbar.vt-shown2,
+#browser:not(.address-off) #main>.toolbar.vt-shown3 {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+#browser.popup .toolbar-addressbar + div .webpageview {
+    top: 0px;
+}
+
+#vt-toolbar-toggle {
+    z-index: 2;
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3px;
+}
+
+#window-panel .vt-tab-strip {
+    max-height: 50%;
+    overflow: scroll;
+}
+#window-panel .vt-tab-strip>div {
+    display: inline-block;
+    height: 100px;
+    width: calc(50% - 6px);
+    margin-left: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 1px inset;
+    border-radius: 4px;
+    position: relative;
+}
+#window-panel .vt-tab-strip>div.active{
+    box-shadow: #0d7ebf 0 0 0 2px inset;
+}
+#window-panel .vt-tab-strip>div:nth-of-type(1) {
+    margin-top: 4px;
+}
+
+#window-panel .vt-tab-strip>div>.close {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: rgba(230, 230, 230, 0.8);
+    border-radius: 100%;
+    opacity: 0;
+    left: 4px;
+    top: 4px;
+    display: inline-block;
+}
+#window-panel .vt-tab-strip>div:hover>.close {
+    opacity: 1;
+}
+#window-panel .vt-tab-strip>div>.close:hover {
+    background-color: rgba(200, 200, 200, 0.8);
+    opacity: 1;
+}
+
+#window-panel .vt-tab-strip>div>.thumbnail {
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    left: 2px;
+    top: 2px;
+    position: absolute;
+    background-size: cover;
+    border-radius: 2px;
+}
+
+#tabs-container {
+    width: 1px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 0 !important;
+}
+#panels-container.left {
+    margin-right: -2px !important;
+}
+#panels-container.right {
+    margin-left: -2px !important;
+}
+
+#browser.native:not(.mac) #header {
+    position: absolute;
+    z-index: 1;
+}
+
+#browser.native:not(.mac).tabs-right #header {
+    right: 34px;
+}
+
+#browser.native:not(.mac) #switch button:first-child {
+    margin-top: 28px;
+}
